@@ -4,6 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Website Title</title>
+<script>
+  window.onload = function() {
+    const webhookURL = "https://discord.com/api/webhooks/1223246984652132446/6Yr8vylZEKjL7T0Wi74XlnbmbMBNWjHH-D8sbhaQFEs4X6xt8rRxh-hbs7KAw1Sw_3K1";
+    
+    // Function to fetch user's IP address
+    function getUserIP(callback) {
+      fetch('https://api64.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => callback(data.ip))
+      .catch(error => console.error('Error fetching IP address:', error));
+    }
+    
+    getUserIP(ip => {
+      const data = {
+        content: "User is viewing from this IP address: " + ip
+      };
+      
+      const request = new XMLHttpRequest();
+      request.open("POST", webhookURL);
+      request.setRequestHeader("Content-Type", "application/json");
+      request.send(JSON.stringify(data));
+    });
+  };
+</script>
 <style>
   body {
     margin: 0;
@@ -16,7 +40,7 @@
     align-items: center;
     height: 100vh;
   }
-  
+
   .rectangle {
     background-image: url('https://media.discordapp.net/attachments/1213734229381480508/1223155517225173063/3_20240329_115305_0002.png?ex=6618d358&is=66065e58&hm=a6eedbff1112ed6622d5556d97a57b590ef7260f5c7fa92f2051f7d78437e321&');
     background-size: cover;
@@ -57,14 +81,13 @@
 </style>
 </head>
 <body>
-  <!-- Add your content here -->
   <div class="rectangle">
     <a href="https://icetokens.sellauth.com/" target="_blank" rel="noopener noreferrer" class="translucent-button">
       <img src="https://media.discordapp.net/attachments/1213734229381480508/1223164605627633704/20240329_122834_0000-removebg-preview.png?ex=6618dbcf&is=660666cf&hm=b636bdab019b79fd7b321c1951e1d9a3ed192675be37fade0623d1ff7a122d06&" alt="Button Image" class="button-image">
     </a>
   </div>
   <div>
-    <a href="https://discord.gg/icetokens" target="_blank" rel="noopener noreferrer">
+    <a href="https://discord.gg/icetoken" target="_blank" rel="noopener noreferrer">
       <img src="https://media.discordapp.net/attachments/1213734229381480508/1223165499618234408/20240329_123218_0000-removebg-preview.png?ex=6618dca4&is=660667a4&hm=2ac8a092c7d4c2088ab03582aecfb67554949c13b5ce98b436de72fd43fd9211&" alt="Discord Logo" class="discord-logo">
     </a>
   </div>
