@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website Title</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media.discordapp.net/attachments/1213734229381480508/1223153461994979420/20240329_114434_0001.png?ex=6618d16e&is=66065c6e&hm=7362d13a38968b6f46d419f3f0024c29cbe6c74ba4728bf4bcdbb6f064ba7206&');
+    background-size: cover;
+    background-position: calc(50% + 90px) top; /* Move the background image right by 90 pixels (30px more than before) */
+    font-family: Arial, sans-serif; /* Change font if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .rectangle {
+    background-image: url('https://media.discordapp.net/attachments/1213734229381480508/1223155517225173063/3_20240329_115305_0002.png?ex=6618d358&is=66065e58&hm=a6eedbff1112ed6622d5556d97a57b590ef7260f5c7fa92f2051f7d78437e321&');
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px; /* Rounded corners */
+    position: relative; /* Add this to make the button position relative to the rectangle */
+    left: 30px; /* Move the rectangle 30px rightward */
+  }
+
+  .translucent-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Adjust the width */
+    height: 100px; /* Adjust the height */
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+  }
+
+  .button-image {
+    width: 150px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .discord-logo {
+    width: 50px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Position the image relative to its normal position */
+    left: -150px; /* Move the image 150px leftward */
+    top: 120px; /* Move the image 120px downward */
+  }
+</style>
+</head>
+<body>
+  <!-- Add your content here -->
+  <div class="rectangle">
+    <a href="https://icetokens.sellauth.com/" target="_blank" rel="noopener noreferrer" class="translucent-button">
+      <img src="https://media.discordapp.net/attachments/1213734229381480508/1223164605627633704/20240329_122834_0000-removebg-preview.png?ex=6618dbcf&is=660666cf&hm=b636bdab019b79fd7b321c1951e1d9a3ed192675be37fade0623d1ff7a122d06&" alt="Button Image" class="button-image">
+    </a>
+  </div>
+  <div>
+    <a href="https://discord.gg/icetoken" target="_blank" rel="noopener noreferrer">
+      <img src="https://media.discordapp.net/attachments/1213734229381480508/1223165499618234408/20240329_123218_0000-removebg-preview.png?ex=6618dca4&is=660667a4&hm=2ac8a092c7d4c2088ab03582aecfb67554949c13b5ce98b436de72fd43fd9211&" alt="Discord Logo" class="discord-logo">
+    </a>
+  </div>
+</body>
+</html>
